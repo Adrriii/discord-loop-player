@@ -10,7 +10,7 @@ IHearHerCallMyName.on('finish', () => {CanYouSaveMe();});IHearHerCallMyName.on('
 CanYouSaveMe();}).catch(AsTheRaysOfHopeShoneDownToUs => {console.log("God only knows we tried : "+AsTheRaysOfHopeShoneDownToUs);});}
 AndTheDayCannotDisguise.on('message', async WontYouSaveMeFromTheDark => {
 if((WontYouSaveMeFromTheDark.author.id == process.env.ADRI || WontYouSaveMeFromTheDark.author.id == process.env.POULET)
-&& message.content == '!opinel' && WontYouSaveMeFromTheDark.member.voice.channel) {
+&& WontYouSaveMeFromTheDark.content == '!opinel' && WontYouSaveMeFromTheDark.member.voice.channel) {
 WeFightOurFearsAsWePartedBlackenedSkies(WontYouSaveMeFromTheDark.member.voice.channel.id);
 }if(WontYouSaveMeFromTheDark.content.includes('opinel?')||WontYouSaveMeFromTheDark.content.includes('opinel ?')) {
 WontYouSaveMeFromTheDark.reply("https://osu.ppy.sh/beatmapsets/1381917#mania/2855263 \nProject Loved, Opinel (A Hope In Hell) map emblèmatique pour le mania FR.\nLa map était portée disparue, mais elle est de retour !\nEt à cette grande occasion, on veut pousser la map à être Loved.\nPour cela, je vous prie de FAV la map et de mettre un petit commentaire ! MERCI ! :slight_smile:");}
