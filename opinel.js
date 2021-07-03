@@ -6,18 +6,23 @@ let hopes = 0;
 
 client.once('ready', () => {
 	console.log('Ready!');
-	console.log('A Hope...');
-    const opinel = client.channels.cache.get(process.env.CHANNEL);
-    if(!opinel) return console.error("Opinel!");
+});
+
+client.login(process.env.TOKEN);
+
+const hopein = (opin) => {
+    console.log('A Hope...');
+    const opinel = client.channels.cache.get(opin);
+    if(!opinel) return console.error("Opineled!");
     opinel.join().then(opinelle => {
-        console.log("In Hell!");
+        console.log(opin+"> In Hell!");
 
         const replay = () => {
             hopes++;
             hopeinhell = opinelle.play(process.env.OPINEL);  
             
             hopeinhell.on('start', () => {
-                console.log("A Hope In Hell "+hopes+"!");
+                console.log(opin+"> A Hope In Hell "+hopes+"!");
             });
             
             hopeinhell.on('finish', () => {
@@ -30,7 +35,12 @@ client.once('ready', () => {
         replay();
     }).catch(op => {
         console.log("In Hell.");
-    })
-});
+    });
+}
 
-client.login(process.env.TOKEN);
+client.on('message', async message => {
+    if((message.author.id == process.env.ADRI || message.author.id == process.env.POULET)
+        && message.content == '!opinel' && message.member.voice.channel) {
+        hopein(message.member.voice.channel.id);
+    }
+});
