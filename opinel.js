@@ -43,4 +43,8 @@ client.on('message', async message => {
         && message.content == '!opinel' && message.member.voice.channel) {
         hopein(message.member.voice.channel.id);
     }
+
+    if(message.content.includes('opinel?')) {
+        message.reply("https://osu.ppy.sh/beatmapsets/1381917#mania/2855263 \nProject Loved, Opinel (A Hope In Hell) map emblèmatique pour le mania FR.\nLa map était portée disparue, mais elle est de retour !\nEt à cette grande occasion, on veut pousser la map à être Loved.\nPour cela, je vous prie de FAV la map et de mettre un petit commentaire ! MERCI ! :slight_smile:");
+    }
 });
