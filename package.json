@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.3"
+    "@discordjs/opus": "^0.5.3",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "sodium": "^3.0.2"
   },
   "devDependencies": {
     "eslint": "^7.30.0"
