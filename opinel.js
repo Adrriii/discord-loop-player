@@ -2,6 +2,8 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+let hopes = 0;
+
 client.once('ready', () => {
 	console.log('Ready!');
 	console.log('A Hope...');
@@ -10,17 +12,22 @@ client.once('ready', () => {
     opinel.join().then(opinelle => {
         console.log("In Hell!");
 
-        const hopeinhell = opinelle.play(process.env.OPINEL);
+        const replay = () => {
+            hopes++;
+            hopeinhell = opinelle.play(process.env.OPINEL);  
+            
+            hopeinhell.on('start', () => {
+                console.log("A Hope In Hell "+hopes+"!");
+            });
+            
+            hopeinhell.on('finish', () => {
+                replay();
+            });
 
-        hopeinhell.on('start', () => {
-            console.log("A Hope In Hell!");
-        })
+            hopeinhell.on('error', console.error);
+        }
 
-        hopeinhell.on('finish', () => {
-            opinelle.play(process.env.OPINEL);
-        })
-
-        hopeinhell.on('error', console.error);
+        replay();
     }).catch(op => {
         console.log("In Hell.");
     })
