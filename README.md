@@ -1,10 +1,10 @@
 # Hope in hell
 
-- Opinel `apt install libtool`
-- Opinel `apt install ffmpeg`
-- Opinel `npm install node-pre-gyp`
-- Opinel `npm install`
-- Hope in hell `cp .env.local .env`
-- A Hope in hell TOKEN (BOT), ADRI (ID) HOPE
-- opinel.mp3
-- `node opinel.js`
+- `apt install libtool`
+- `apt install ffmpeg`
+- `npm install node-pre-gyp`
+- `npm install`
+- `cp .env.local .env`
+- Add the desired mp3
+- Fill in correct parameters
+- `node main.js`
