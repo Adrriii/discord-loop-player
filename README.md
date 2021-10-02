@@ -1,4 +1,6 @@
-# Hope in hell
+# Discord Loop Player
+
+Extremely simple bot to play a song in a loop
 
 - `apt install libtool`
 - `apt install ffmpeg`
